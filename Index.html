@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mueblería Hermanos Jota</title>
+    <link rel="stylesheet" href="css/style.css" /> <!-- Estilo general y del Main -->
+    <link rel="stylesheet" href="css/carrito.css" /> <!-- Estilos del carrito -->
+    <link rel="icon" href="images/logo.png" type="image/png"/>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <!-- Enlace al inicio con aria-label para accesibilidad -->
+                <a href="index.html" class="logo-link" aria-label="Ir a la página de inicio">
+                    <img src="images/logo.svg" alt="Logo Mueblería Hermanos Jota" width="50" height="50" />
+                    <h1>Mueblería Hermanos Jota</h1>
+                </a>
+            </div>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li>
+                        <a href="#" id="cart-link" aria-label="Ver carrito de compras">
+                            🛒 <span id="cart-count" aria-live="polite">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero" role="region" aria-label="Banner principal">
+        <div class="hero-content container">
+            <h2>Diseño y calidad en cada pieza</h2>
+            <p>Más de 30 años creando muebles de madera de autor</p>
+            <a href="productos.html" class="btn" role="button">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <main>
+        <section class="destacados container" aria-labelledby="destacados-title">
+            <h2 id="destacados-title">Productos Destacados</h2>
+            <div id="destacados-list" class="productos-grid" aria-live="polite" aria-relevant="additions">
+                <!-- Aquí se cargarán dinámicamente con JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 Mueblería Hermanos Jota - Todos los derechos reservados</p>
+            <p>Tel: (000) 123-4567 | Email: <a href="mailto:contacto@muebleriajota.com">contacto@muebleriajota.com</a></p>
+        </div>
+    </footer>
+
+<!-- Panel lateral del carrito -->
+<div id="carrito-overlay" class="carrito-overlay"></div>
+
+<aside id="carrito-panel" class="carrito-panel">
+  <header class="carrito-header">
+    <h3>Tu Carrito</h3>
+    <button id="btn-cerrar-carrito" class="btn-cerrar" aria-label="Cerrar carrito">&times;</button>
+  </header>
+
+  <div id="panel-cart-items" class="panel-cart-items">
+    <!-- Aquí se cargarán los items dinámicamente -->
+  </div>
+
+  <footer class="carrito-footer">
+    <div class="carrito-total">
+      <span>Total:</span>
+      <strong id="panel-total-amount">$0</strong>
+    </div>
+    <button class="btn-checkout" onclick="procederAlCheckout()">Proceder al Pago</button>
+  </footer>
+</aside>
+
+
+
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/detalle.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
