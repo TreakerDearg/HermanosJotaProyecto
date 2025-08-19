@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrito de Compras - Mueblería Hermanos Jota</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/carrito.css" />
+  <link rel="icon" href="images/logo.png" type="image/png"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <a href="index.html" class="logo-link" aria-label="Ir a la página de inicio">
+          <img src="images/logo.svg" alt="Logo Mueblería Hermanos Jota" />
+          <h1>Mueblería Hermanos Jota</h1>
+        </a>
+      </div>
+      <nav aria-label="Menú principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li>
+            <a href="carrito.html" id="cart-link" aria-label="Ver carrito de compras">
+              🛒 <span id="cart-count" aria-live="polite" aria-atomic="true">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container carrito-page" role="main">
+    <h2>Tu Carrito de Compras</h2>
+
+    <!-- Contenedor para productos del carrito -->
+    <section id="cart-items-container" class="cart-items-container" aria-live="polite" aria-relevant="additions removals">
+      <!-- Aquí se inyectan productos con JS -->
+      <p class="empty-cart-message">Cargando productos del carrito...</p>
+    </section>
+
+    <!-- Resumen y acción -->
+    <aside class="cart-summary" aria-label="Resumen del carrito">
+      <div class="summary-item">
+        <strong>Subtotal:</strong> <span id="cart-subtotal" aria-atomic="true" aria-live="polite">$0</span>
+      </div>
+      <div class="summary-item">
+        <strong>Total:</strong> <span id="cart-total" aria-atomic="true" aria-live="polite">$0</span>
+      </div>
+      <button class="btn-primary" onclick="procederAlCheckout()" aria-label="Finalizar compra y proceder al pago">Finalizar Compra</button>
+    </aside>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mueblería Hermanos Jota</title>
+    <title>Contacto - Mueblería Hermanos Jota</title>
+
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configuración de colores madera para Tailwind -->
+
+    <!-- Configuración colores madera -->
     <script>
         tailwind.config = {
             theme: {
@@ -22,9 +24,11 @@
         }
     </script>
     <link rel="icon" href="images/logo.png" type="image/png"/>
-    <!-- Conexión al CSS externo -->
+    <!-- CSS generales -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carrito.css">
+    <!-- CSS exclusivo de contacto -->
+    <link rel="stylesheet" href="css/contacto.css">
 </head>
 <body class="font-sans text-maderaOscuro bg-beige">
 
@@ -40,46 +44,41 @@
                     <li><a href="productos.html" class="hover:text-maderaClaro font-semibold">Productos</a></li>
                     <li><a href="contacto.html" class="hover:text-maderaClaro font-semibold">Contacto</a></li>
                     <li>
-                         <button id="btn-carrito" class="relative flex items-center text-beige hover:text-maderaClaro font-semibold">
+                        <button id="btn-carrito" class="relative flex items-center text-beige hover:text-maderaClaro font-semibold">
                             🛒
                             <span id="contador-carrito" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-1">0</span>
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-<!-- Hero Banner Mejorado -->
-<section class="relative bg-beige hero">
-    <div class="container mx-auto flex flex-col md:flex-row items-center py-16 px-6">
-        <!-- Texto Hero -->
-        <div class="md:w-1/2 text-center md:text-left z-10">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-maderaOscuro drop-shadow-lg">
-                30 años de tradición en muebles de autor
-            </h1>
-            <p class="text-lg md:text-xl mb-6 text-maderaMedio drop-shadow">
-                Calidad, diseño moderno y materiales de excelencia.
-            </p>
-            <a href="productos.html" class="bg-gradient-to-br from-maderaOscuro to-maderaMedio text-beige px-6 py-3 rounded font-semibold hover:from-maderaMedio hover:to-maderaOscuro transition transform hover:-translate-y-1 inline-block">
-                Ver Productos
-            </a>
-        </div>
+    <!-- Sección Contacto -->
+    <section class="py-16">
+        <div class="container mx-auto px-6 max-w-lg">
+            <h1 class="text-4xl font-bold text-maderaOscuro mb-6 text-center">Contáctanos</h1>
+            <p class="text-maderaMedio mb-8 text-center">Envianos tus dudas o consultas y te responderemos a la brevedad.</p>
 
-        <!-- Imagen Hero -->
-        <div class="md:w-1/2 mt-8 md:mt-0 relative hero-image">
-            <img src="images/Sillas Cordoba.png" alt="Muebles de diseño" class="rounded-xl shadow-2xl transform transition duration-500 hover:scale-105 z-10">
-            <div class="absolute inset-0 hero-overlay rounded-xl pointer-events-none"></div>
-        </div>
-    </div>
-</section>
+            <form id="form-contacto" class="bg-beige p-6 rounded-xl shadow-lg space-y-4">
+                <div>
+                    <label for="nombre" class="block font-semibold mb-1">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" class="w-full p-2 border-2 border-maderaMedio rounded">
+                </div>
+                <div>
+                    <label for="email" class="block font-semibold mb-1">Email</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" class="w-full p-2 border-2 border-maderaMedio rounded">
+                </div>
+                <div>
+                    <label for="mensaje" class="block font-semibold mb-1">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." rows="5" class="w-full p-2 border-2 border-maderaMedio rounded"></textarea>
+                </div>
+                <button type="submit" class="bg-maderaMedio text-beige px-6 py-3 rounded hover:bg-maderaOscuro transition font-semibold w-full">Enviar</button>
+            </form>
 
-    <!-- Productos Destacados -->
-    <section class="py-12 bg-beige">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center text-maderaOscuro">Productos Destacados</h2>
-            <div id="destacados" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <!-- Productos se cargarán dinámicamente -->
+            <!-- Mensaje de éxito -->
+            <div id="mensaje-exito" class="hidden mt-4 p-3 bg-maderaClaro text-maderaOscuro rounded text-center font-semibold">
+                ¡Mensaje enviado correctamente!
             </div>
         </div>
     </section>
@@ -95,18 +94,23 @@
 
 <!-- Asegurarse de que el contenido principal no quede tapado -->
 <div class="pb-20"></div> <!-- Añadir este padding bottom al final del contenido -->
-
-
 <!-- Modal del Carrito -->
 <div id="modal-carrito" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
-    <div class="bg-beige rounded-xl shadow-2xl w-11/12 md:w-1/2 lg:w-1/3 p-6 relative">
+    <div class="bg-beige rounded-xl shadow-2xl w-11/12 md:w-1/2 lg:w-1/3 p-6 relative flex flex-col">
+        <!-- Título -->
         <h2 class="text-2xl font-bold mb-4 text-maderaOscuro">Tu Carrito</h2>
-        <ul id="lista-carrito" class="space-y-4 max-h-64 overflow-y-auto"></ul>
-        <div class="mt-4 flex justify-between items-center">
-            <span class="font-semibold text-maderaOscuro">Total: $<span id="total-carrito">0</span></span>
+
+        <!-- Lista de productos -->
+        <ul id="lista-carrito" class="space-y-4 max-h-64 overflow-y-auto mb-4"></ul>
+
+        <!-- Total -->
+        <div class="font-semibold text-maderaOscuro text-lg mb-4">
+            Total: $<span id="total-carrito">0</span>
         </div>
-        <div class="mt-4 flex justify-end space-x-2">
-            <button id="cerrar-carrito" class="bg-maderaOscuro text-beige px-4 py-2 rounded hover:bg-maderaMedio transition">
+
+        <!-- Botones -->
+        <div class="flex justify-end space-x-2 mt-auto">
+            <button id="btn-cerrar-carrito" class="bg-maderaOscuro text-beige px-4 py-2 rounded hover:bg-maderaMedio transition">
                 Cerrar
             </button>
             <button id="btn-pagar" class="bg-maderaMedio text-beige px-4 py-2 rounded hover:bg-maderaOscuro transition">
@@ -116,17 +120,10 @@
     </div>
 </div>
 
-
-<!-- Toast Notification -->
-<div id="toast" class="fixed top-4 right-4 bg-maderaMedio text-beige px-4 py-2 rounded shadow-lg opacity-0 pointer-events-none transform transition-all duration-300 z-50 flex items-center space-x-3">
-    <!-- La imagen, nombre y precio se agregarán dinámicamente con JS -->
-</div>
-
-
     <!-- Scripts -->
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
     <script src="js/carrito.js"></script>
-    
+    <script src="js/contacto.js"></script>
 </body>
 </html>

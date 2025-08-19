@@ -1,0 +1,169 @@
+/* =========================
+   Estilos exclusivos para el carrito
+   ========================= */
+
+#modal-carrito {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#modal-carrito.flex {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#modal-carrito.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
+#modal-carrito .bg-beige {
+    background: #F5F0E1;
+    border: 2px solid #A67C52;
+    box-shadow: 0 10px 25px rgba(92, 64, 51, 0.4);
+}
+
+#modal-carrito h2 {
+    color: #5C4033;
+    font-family: 'Georgia', serif;
+}
+
+#modal-carrito ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #A67C52;
+    padding-bottom: 0.5rem;
+}
+
+#modal-carrito button {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#modal-carrito button:hover {
+    background: #A67C52;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+/* Scroll personalizado para lista de productos */
+#lista-carrito {
+    scrollbar-width: thin;
+    scrollbar-color: #A67C52 #F5F0E1;
+}
+
+#lista-carrito::-webkit-scrollbar {
+    width: 6px;
+}
+
+#lista-carrito::-webkit-scrollbar-track {
+    background: #F5F0E1;
+}
+
+#lista-carrito::-webkit-scrollbar-thumb {
+    background-color: #A67C52;
+    border-radius: 3px;
+}
+
+/* =========================
+   Estilos exclusivos para el carrito y toast
+   ========================= */
+
+/* Modal carrito */
+#modal-carrito {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#modal-carrito.flex {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#modal-carrito.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
+#modal-carrito .bg-beige {
+    background: #F5F0E1;
+    border: 2px solid #A67C52;
+    box-shadow: 0 10px 25px rgba(92, 64, 51, 0.4);
+    border-radius: 1rem;
+}
+
+#modal-carrito h2 {
+    color: #5C4033;
+    font-family: 'Georgia', serif;
+    text-align: center;
+}
+
+#modal-carrito ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #A67C52;
+    padding-bottom: 0.5rem;
+}
+
+#modal-carrito button {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#modal-carrito button:hover {
+    background: #A67C52;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+/* Scroll personalizado para lista de productos */
+#lista-carrito {
+    max-height: 16rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #A67C52 #F5F0E1;
+}
+
+#lista-carrito::-webkit-scrollbar {
+    width: 6px;
+}
+
+#lista-carrito::-webkit-scrollbar-track {
+    background: #F5F0E1;
+}
+
+#lista-carrito::-webkit-scrollbar-thumb {
+    background-color: #A67C52;
+    border-radius: 3px;
+}
+
+/* =========================
+   Toast Notification estilo madera tipo mini tarjeta
+   ========================= */
+#toast {
+    transform: translateY(-20px);
+}
+
+#toast.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#toast .toast-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 2px solid #A67C52;
+}
+
+#toast .toast-text {
+    display: flex;
+    flex-direction: column;
+}
+
+#toast .toast-text span {
+    font-weight: bold;
+    color: #F5F0E1;
+}

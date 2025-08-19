@@ -1,0 +1,127 @@
+/* detalle-producto.css */
+
+/* Contenedor principal de detalle */
+.detalle-container {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Imagen del producto */
+.detalle-imagen {
+  flex: 1 1 400px;
+  max-width: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.detalle-imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Info del producto */
+.detalle-info {
+  flex: 1 1 400px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #222;
+}
+
+/* Nombre del producto */
+.detalle-info h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+/* Precio */
+.detalle-precio {
+  font-size: 2.4rem;
+  color: #c96f29; /* un color marrón/ámbar */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Descripción */
+.detalle-descripcion {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* Botones */
+.btn-primary, .btn-secundario {
+  cursor: pointer;
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+/* Botón principal (añadir al carrito) */
+.btn-primary {
+  background-color: #c96f29;
+  color: white;
+  border: none;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(201,111,41,0.5);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #a35a20;
+  outline: none;
+}
+
+/* Botón secundario (volver a productos) */
+.btn-secundario {
+  background-color: transparent;
+  color: #c96f29;
+  border: 2px solid #c96f29;
+  padding: 0.85rem 1.8rem;
+}
+
+.btn-secundario:hover, .btn-secundario:focus {
+  background-color: #c96f29;
+  color: white;
+  outline: none;
+}
+
+/* Responsive: pantallas pequeñas */
+@media (max-width: 768px) {
+  .detalle-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem 3rem;
+  }
+
+  .detalle-imagen,
+  .detalle-info {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .detalle-info h1 {
+    font-size: 2rem;
+  }
+
+  .detalle-precio {
+    font-size: 2rem;
+  }
+}

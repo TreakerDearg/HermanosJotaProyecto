@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Mueblería Hermanos Jota</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuración colores madera -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        maderaClaro: '#D9B382',
+                        maderaMedio: '#A67C52',
+                        maderaOscuro: '#5C4033',
+                        beige: '#F5F0E1'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="icon" href="images/logo.png" type="image/png"/>
+</head>
+<body class="font-sans text-maderaOscuro bg-beige">
+
+    <!-- Header -->
+    <header class="bg-maderaMedio text-beige shadow">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo Mueblería Hermanos Jota" class="h-10">
+            </div>
+            <nav>
+                <ul class="flex space-x-6 items-center">
+                    <li><a href="index.html" class="hover:text-maderaClaro font-semibold">Inicio</a></li>
+                    <li><a href="productos.html" class="hover:text-maderaClaro font-semibold">Productos</a></li>
+                    <li><a href="contacto.html" class="hover:text-maderaClaro font-semibold">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Checkout -->
+    <main class="container mx-auto px-6 py-12">
+        <h2 class="text-3xl font-bold mb-8">Resumen de tu carrito</h2>
+        <ul id="checkout-list" class="space-y-4 mb-6"></ul>
+        <div class="flex justify-between items-center text-2xl font-bold mb-6">
+            <span>Total:</span>
+            <span id="checkout-total">$0</span>
+        </div>
+        <div class="flex space-x-4">
+            <button id="btn-volver" class="bg-maderaOscuro text-beige px-6 py-3 rounded hover:bg-maderaMedio transition">
+                Volver al carrito
+            </button>
+            <button id="btn-finalizar" class="bg-maderaMedio text-beige px-6 py-3 rounded hover:bg-maderaOscuro transition">
+                Finalizar compra
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-maderaOscuro text-beige py-8">
+        <div class="container mx-auto px-6 text-center space-y-2">
+            <p>&copy; 2025 Mueblería Hermanos Jota. Todos los derechos reservados.</p>
+            <p>Dirección: Calle Falsa 123, Ciudad</p>
+            <p>Email: contacto@muebleriajota.com</p>
+        </div>
+    </footer>
+
+    <script src="js/checkout.js"></script>
+</body>
+</html>
