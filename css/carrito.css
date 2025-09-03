@@ -121,7 +121,7 @@
     max-height: 16rem;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: #A67C52 #F5F0E1;
+    scrollbar-color: #A67C52 #adaaa0;
 }
 
 #lista-carrito::-webkit-scrollbar {
