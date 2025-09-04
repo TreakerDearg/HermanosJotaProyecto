@@ -1,4 +1,3 @@
-// js/main.js
 
 // Función para obtener productos destacados (simula carga asíncrona)
 function obtenerDestacados() {
