@@ -23,7 +23,7 @@ formContacto.addEventListener("submit", function(e){
 
     // Simulamos envío exitoso
     mensajeExito.classList.remove("hidden");
-    formContacto.reset();
+    formContacto.reset(); // <-- Aquí se limpia el formulario automáticamente
 
     // Ocultar el mensaje después de 3 segundos
     setTimeout(() => {
