@@ -97,15 +97,19 @@ function renderizarCarrito() {
     totalCarrito.textContent = `$${total}`;
 
     // Eventos para eliminar productos
-    listaCarrito.querySelectorAll("button").forEach(btn => {
-        btn.addEventListener("click", (e) => {
-            const index = e.target.dataset.index;
-            carrito.splice(index, 1);
-            actualizarContador();
-            guardarCarrito();
-            renderizarCarrito();
+        listaCarrito.querySelectorAll("button").forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                const index = e.target.dataset.index;
+                const producto = carrito[index];
+                const confirmar = confirm(`¿Seguro que deseas eliminar \"${producto.nombre}\" del carrito?`);
+                if (confirmar) {
+                    carrito.splice(index, 1);
+                    actualizarContador();
+                    guardarCarrito();
+                    renderizarCarrito();
+                }
+            });
         });
-    });
 }
 
 // Abrir modal del carrito
