@@ -76,6 +76,8 @@ function cargarProductos() {
 // Inicializar página
 document.addEventListener("DOMContentLoaded", async () => {
     try {
+        // Mostrar indicador de carga
+        contenedorProductos.innerHTML = `<p class="text-center text-maderaMedio col-span-full animate-pulse">Cargando productos...</p>`;
         const lista = await cargarProductos();
         renderizarProductos(lista);
     } catch (error) {
