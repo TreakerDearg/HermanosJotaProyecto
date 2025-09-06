@@ -2,12 +2,12 @@
 
 Tienda online de muebles de madera de autor, desarrollada como proyecto académico. El objetivo es simular una experiencia de compra moderna, visualmente atractiva y fácil de usar, acercando la tradición artesanal a un entorno digital.
 
-## 🚀 Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 - **HTML5** – Estructura base de cada página.
 - **Tailwind CSS** – Framework CSS para un diseño moderno y responsive.
 - **JavaScript (Vanilla)** – Lógica funcional del buscador, carrito y demás interacciones dinámicas.
 
-## 🛒 Funcionalidades Principales
+##  Funcionalidades Principales
 - **Página de Inicio (`index.html`)**  
   Presentación de la marca, introducción al catálogo y acceso rápido a las secciones principales.
 
@@ -23,7 +23,7 @@ Tienda online de muebles de madera de autor, desarrollada como proyecto académi
 - **Contacto (`contacto.html`)**  
   Formulario de contacto para consultas, sugerencias o soporte.
 
-##  Estructura del Proyecto
+## Estructura del Proyecto
 El repositorio organiza sus archivos de forma clara:
 - **`/css`** → Estilos globales y personalizados.
 - **`/js`** → Scripts de interacción (buscador, carrito, etc.).
@@ -36,7 +36,7 @@ Para visualizar el proyecto:
 1. Clona el repositorio.
 2. Abre `index.html` en tu navegador.
 
-##  Alumnos
+## Alumnos
 coronel alexis
 kevin laura
 Leandro Ferreira
