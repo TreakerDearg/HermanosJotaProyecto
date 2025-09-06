@@ -1,6 +1,8 @@
-/* detalle-producto.css */
+/* =========================
+   Detalle de Producto Mejorado
+   ========================= */
 
-/* Contenedor principal de detalle */
+/* Contenedor principal */
 .detalle-container {
   display: flex;
   gap: 3rem;
@@ -8,24 +10,32 @@
   padding-bottom: 3rem;
   flex-wrap: wrap;
   justify-content: center;
+  animation: fadeInUp 0.6s ease forwards;
 }
 
 /* Imagen del producto */
 .detalle-imagen {
   flex: 1 1 400px;
   max-width: 450px;
-  border-radius: 12px;
+  border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(92, 64, 51, 0.2);
   background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .detalle-imagen img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;
-  border-radius: 12px;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.detalle-imagen:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(92, 64, 51, 0.3);
 }
 
 /* Info del producto */
@@ -35,72 +45,111 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  color: #222;
+  color: #5C4033; /* maderaOscuro */
+  gap: 1rem;
 }
 
 /* Nombre del producto */
 .detalle-info h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Tags tipo marketplace */
+.product-tags {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
   margin-bottom: 1rem;
-  color: #1a1a1a;
-  font-weight: 700;
+}
+
+.product-tags span {
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.product-tags .stock {
+  background-color: #22c55e; /* verde */
+  color: #fff;
+}
+
+.product-tags .envio {
+  background-color: #facc15; /* amarillo */
+  color: #5C4033; /* maderaOscuro */
+}
+
+.product-tags .rating ion-icon {
+  color: #facc15;
+  font-size: 1rem;
 }
 
 /* Precio */
 .detalle-precio {
-  font-size: 2.4rem;
-  color: #c96f29; /* un color marrón/ámbar */
+  font-size: 2.5rem;
   font-weight: 700;
+  color: #A67C52; /* maderaMedio */
   margin-bottom: 1.5rem;
 }
 
 /* Descripción */
-.detalle-descripcion {
+.detalle-descripcion,
+.detalle-detalles {
   font-size: 1.15rem;
-  line-height: 1.5;
-  color: #444;
-  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #5C4033;
+  margin-bottom: 1.5rem;
 }
 
 /* Botones */
 .btn-primary, .btn-secundario {
   cursor: pointer;
   padding: 0.85rem 2rem;
-  border-radius: 8px;
+  border-radius: 12px;
   font-weight: 700;
-  text-decoration: none;
   display: inline-block;
   text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
   user-select: none;
 }
 
 /* Botón principal (añadir al carrito) */
 .btn-primary {
-  background-color: #c96f29;
-  color: white;
+  background-color: #A67C52; /* maderaMedio */
+  color: #F5F0E1;
   border: none;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(201,111,41,0.5);
+  box-shadow: 0 6px 15px rgba(92, 64, 51, 0.3);
 }
 
 .btn-primary:hover, .btn-primary:focus {
-  background-color: #a35a20;
+  background-color: #5C4033; /* maderaOscuro */
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(92, 64, 51, 0.4);
   outline: none;
 }
 
 /* Botón secundario (volver a productos) */
 .btn-secundario {
   background-color: transparent;
-  color: #c96f29;
-  border: 2px solid #c96f29;
-  padding: 0.85rem 1.8rem;
+  color: #A67C52;
+  border: 2px solid #A67C52;
 }
 
 .btn-secundario:hover, .btn-secundario:focus {
-  background-color: #c96f29;
-  color: white;
+  background-color: #A67C52;
+  color: #F5F0E1;
+  transform: scale(1.05);
   outline: none;
+}
+
+/* Animación fade-in para todo el detalle */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive: pantallas pequeñas */
