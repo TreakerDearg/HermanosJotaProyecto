@@ -36,10 +36,10 @@ const productos = [
     },
     {
         id: 5,
-        nombre: "Banco Multiusos",
+        nombre: "Silla copacabana",
         descripcion: "Banco en madera maciza, perfecto para entradas o como asiento adicional.",
         precio: 9000,
-        imagen: "images/Silla Copacabana.png",
+        imagen: "iamges/SillonCopacabana.png",
         destacado: false
     }
 ];
