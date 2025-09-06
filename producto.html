@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carrito.css">
     <!-- CSS exclusivo de detalle de producto -->
-    <link rel="stylesheet" href="css/producto.css">
+    <link rel="stylesheet" href="css/detalle-producto.css">
 </head>
 <body class="font-sans text-maderaOscuro bg-beige">
 
@@ -53,29 +53,50 @@
             </nav>
         </div>
     </header>
+<!-- Sección de detalle de producto -->
+<section class="py-12 bg-beige">
+    <div class="container mx-auto px-6">
+        <div id="detalle-producto" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
-    <!-- Sección de detalle de producto -->
-    <section class="py-12">
-        <div class="container mx-auto px-6">
-            <div id="detalle-producto" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                <!-- Imagen -->
-                <div id="imagen-producto" class="rounded-xl overflow-hidden shadow-lg">
-                    <!-- Imagen se carga dinámicamente -->
+            <!-- Imagen del producto -->
+            <div id="imagen-producto" class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
+                <!-- Imagen se carga dinámicamente -->
+            </div>
+
+            <!-- Información del producto -->
+            <div class="flex flex-col justify-between space-y-4">
+
+                <!-- Nombre -->
+                <h1 id="nombre-producto" class="text-4xl md:text-5xl font-extrabold text-maderaOscuro leading-tight"></h1>
+
+                <!-- Tags tipo marketplace -->
+                <div class="flex items-center space-x-4">
+                    <span id="stock-producto" class="px-3 py-1 bg-green-500 text-white rounded-full text-sm font-semibold">En Stock</span>
+                    <span id="envio-gratis" class="px-3 py-1 bg-yellow-400 text-maderaOscuro rounded-full text-sm font-semibold">Envío Gratis</span>
+                    <div id="rating-producto" class="flex items-center text-yellow-400 space-x-1">
+                        <!-- Estrellas se pueden renderizar dinámicamente con JS(No se implememto) -->
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
                 </div>
 
-                <!-- Información -->
-                <div class="flex flex-col justify-between">
-                    <h1 id="nombre-producto" class="text-4xl font-bold mb-4 text-maderaOscuro"></h1>
-                    <p id="descripcion-producto" class="text-maderaMedio mb-4 text-lg"></p>
-                    <p id="detalles-producto" class="text-maderaMedio mb-4 text-sm"></p>
-                    <p id="precio-producto" class="font-bold text-2xl mb-6 text-maderaOscuro"></p>
-                    <button id="btn-agregar-carrito" class="bg-maderaMedio text-beige px-6 py-3 rounded hover:bg-maderaOscuro transition">
-                        Añadir al Carrito
-                    </button>
-                </div>
+                <!-- Descripción y detalles -->
+                <p id="descripcion-producto" class="text-maderaMedio text-lg leading-relaxed"></p>
+                <p id="detalles-producto" class="text-maderaMedio text-sm leading-relaxed"></p>
+
+                <!-- Precio -->
+                <p id="precio-producto" class="text-3xl md:text-4xl font-bold text-maderaOscuro"></p>
+
+                <!-- Botón de agregar al carrito -->
+                <button id="btn-agregar-carrito" class="bg-maderaMedio text-beige px-6 py-3 rounded-xl font-bold hover:bg-maderaOscuro hover:scale-105 transition transform shadow-md">
+                    Añadir al Carrito
+                </button>
             </div>
         </div>
-    </section>
+    </div>
 
 <!-- Footer Mejorado con Ionicons -->
 <footer class="bg-maderaOscuro text-beige py-10 w-full">
