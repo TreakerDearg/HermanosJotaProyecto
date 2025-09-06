@@ -83,14 +83,59 @@
         </div>
     </section>
 
-<!-- Footer -->
-<footer class="bg-maderaOscuro text-beige py-4 w-full fixed bottom-0 left-0 z-50">
-    <div class="container mx-auto px-6 text-center space-y-1">
-        <p class="text-sm">&copy; 2025 Mueblería Hermanos Jota. Todos los derechos reservados.</p>
-        <p class="text-sm">Dirección: Calle Falsa 123, Ciudad</p>
-        <p class="text-sm">Email: contacto@muebleriajota.com</p>
+<!-- Footer Mejorado con Ionicons -->
+<footer class="bg-maderaOscuro text-beige py-10 w-full">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Logo y descripción -->
+        <div class="flex flex-col items-center md:items-start space-y-4">
+            <img src="images/logo.png" alt="Logo Mueblería Hermanos Jota" class="h-12">
+            <p class="text-sm text-beige/80 text-center md:text-left">
+                30 años de tradición en la fabricación de muebles de autor. Calidad y diseño que perdura.
+            </p>
+        </div>
+
+        <!-- Enlaces rápidos -->
+        <div class="flex flex-col items-center md:items-start space-y-2">
+            <h3 class="font-semibold text-lg mb-2">Enlaces Rápidos</h3>
+            <ul class="space-y-1">
+                <li><a href="index.html" class="hover:text-maderaClaro transition">Inicio</a></li>
+                <li><a href="productos.html" class="hover:text-maderaClaro transition">Productos</a></li>
+                <li><a href="contacto.html" class="hover:text-maderaClaro transition">Contacto</a></li>
+                <li><a href="#" class="hover:text-maderaClaro transition">Carrito</a></li>
+            </ul>
+        </div>
+
+        <!-- Contacto y redes sociales -->
+        <div class="flex flex-col items-center md:items-start space-y-2">
+            <h3 class="font-semibold text-lg mb-2">Contacto</h3>
+            <p class="text-sm flex items-center space-x-2">
+                <ion-icon name="location-outline"></ion-icon>
+                <span>Calle Falsa 123, Ciudad</span>
+            </p>
+            <p class="text-sm flex items-center space-x-2">
+                <ion-icon name="mail-outline"></ion-icon>
+                <span>contacto@muebleriajota.com</span>
+            </p>
+            <p class="text-sm flex items-center space-x-2">
+                <ion-icon name="call-outline"></ion-icon>
+                <span>+54 9 11 1234-5678</span>
+            </p>
+            <div class="flex space-x-3 mt-2">
+                <a href="#" class="hover:text-maderaClaro transition"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#" class="hover:text-maderaClaro transition"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#" class="hover:text-maderaClaro transition"><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-maderaMedio mt-8 pt-4 text-center text-sm text-beige/70">
+        &copy; 2025 Mueblería Hermanos Jota. Todos los derechos reservados.
     </div>
 </footer>
+
 
 <!-- Asegurarse de que el contenido principal no quede tapado -->
 <div class="pb-20"></div> <!-- Añadir este padding bottom al final del contenido -->
@@ -125,5 +170,7 @@
     <script src="js/main.js"></script>
     <script src="js/carrito.js"></script>
     <script src="js/contacto.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
