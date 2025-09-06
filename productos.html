@@ -54,22 +54,27 @@
         </div>
     </header>
 
-    <!-- Página de productos -->
-    <section class="py-12">
-        <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl font-bold mb-8 text-center text-maderaOscuro">Todos nuestros productos</h1>
+<!-- Página de productos -->
+<section class="py-12 bg-beige">
+    <div class="container mx-auto px-6">
 
-            <!-- Campo de búsqueda -->
-            <div class="mb-6 text-center">
-                <input type="text" id="buscador" placeholder="Buscar productos..." class="px-4 py-2 rounded border border-maderaMedio focus:outline-none focus:ring-2 focus:ring-maderaOscuro w-full max-w-md">
-            </div>
+        <!-- Título -->
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-8 text-center text-maderaOscuro drop-shadow-sm">
+            Todos nuestros productos
+        </h1>
 
-            <!-- Grilla de productos -->
-            <div id="productos" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <!-- Productos se cargarán dinámicamente -->
-            </div>
+        <!-- Campo de búsqueda -->
+        <div class="mb-8 flex justify-center">
+            <input type="text" id="buscador" placeholder="Buscar productos..."
+                class="px-4 py-3 rounded-xl border-2 border-maderaMedio focus:outline-none focus:ring-2 focus:ring-maderaOscuro w-full max-w-lg transition-colors duration-300 shadow-sm">
         </div>
-    </section>
+
+        <!-- Grilla de productos -->
+        <div id="productos" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Productos se cargarán dinámicamente con JS -->
+        </div>
+    </div>
+</section>
 
 <!-- Footer Mejorado con Ionicons -->
 <footer class="bg-maderaOscuro text-beige py-10 w-full">
