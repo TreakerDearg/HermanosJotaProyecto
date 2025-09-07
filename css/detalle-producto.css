@@ -61,6 +61,7 @@
 .product-tags {
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 1rem;
 }
@@ -152,11 +153,28 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive: pantallas pequeñas */
+/* =========================
+   Responsividad
+========================= */
+
+/* Tablets / pantallas medianas */
+@media (max-width: 992px) {
+  .detalle-container {
+    gap: 2rem;
+  }
+  .detalle-info h1 {
+    font-size: 2.5rem;
+  }
+  .detalle-precio {
+    font-size: 2.2rem;
+  }
+}
+
+/* Móviles / pantallas pequeñas */
 @media (max-width: 768px) {
   .detalle-container {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 2rem 1rem 3rem;
   }
 
@@ -172,5 +190,30 @@
 
   .detalle-precio {
     font-size: 2rem;
+  }
+
+  .btn-primary, .btn-secundario {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .product-tags {
+    justify-content: flex-start;
+  }
+}
+
+/* Extra pequeño (smartphones) */
+@media (max-width: 480px) {
+  .detalle-info h1 {
+    font-size: 1.75rem;
+  }
+
+  .detalle-precio {
+    font-size: 1.8rem;
+  }
+
+  .btn-primary, .btn-secundario {
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
   }
 }

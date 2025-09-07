@@ -2,13 +2,28 @@
    Estilos exclusivos para Contacto
    ========================= */
 
-/* Formulario */
+/* Contenedor general */
+#form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Inputs y textarea */
 #form-contacto input,
 #form-contacto textarea {
     background-color: #F5F0E1;
-    border-color: #A67C52;
+    border: 2px solid #A67C52;
     color: #5C4033;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    resize: vertical;
 }
 
 #form-contacto input:focus,
@@ -19,16 +34,68 @@
 }
 
 /* Botón Enviar */
-#form-contacto button:hover {
+#form-contacto button {
+    background-color: #A67C52;
+    color: #F5F0E1;
+    border: none;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 0.85rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#form-contacto button:hover,
+#form-contacto button:focus {
+    background-color: #5C4033;
     transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(92, 64, 51, 0.3);
+    outline: none;
 }
 
 /* Mensaje de éxito */
 #mensaje-exito {
     animation: fadeIn 0.5s forwards;
+    color: #22c55e; /* verde para éxito */
+    font-weight: 600;
+    margin-top: 0.5rem;
 }
 
+/* Animación fade-in */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   Responsividad
+========================= */
+
+/* Tablets / pantallas medianas */
+@media (max-width: 992px) {
+    #form-contacto {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Móviles / pantallas pequeñas */
+@media (max-width: 768px) {
+    #form-contacto {
+        padding: 1rem 0.5rem;
+        gap: 0.75rem;
+    }
+
+    #form-contacto input,
+    #form-contacto textarea,
+    #form-contacto button {
+        font-size: 0.95rem;
+        padding: 0.65rem 1rem;
+    }
+}
+
+/* Smartphones extra pequeños */
+@media (max-width: 480px) {
+    #form-contacto button {
+        width: 100%;
+    }
 }
