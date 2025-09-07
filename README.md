@@ -54,7 +54,7 @@ No requiere instalación de dependencias.
 1. Clonar el repositorio:
 
 ```bash
-git clone 
+git clone https://github.com/TreakerDearg/HermanosJotaProyecto.git
 ```
 
 2. Abrir `index.html` en cualquier navegador moderno.
