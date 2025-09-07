@@ -1,47 +1,73 @@
-# Tienda Hermanos Jota
+Perfecto, Treaker. Vamos a crear un README **profesional, visual y completo**, resaltando las tecnologías, la funcionalidad de cada HTML y la interacción entre HTML, CSS/Tailwind y JS, listo para GitHub.
 
-Tienda online de muebles de madera de autor, desarrollada como proyecto académico. El objetivo es simular una experiencia de compra moderna, visualmente atractiva y fácil de usar, acercando la tradición artesanal a un entorno digital.
+---
 
-##  Tecnologías Utilizadas
-- **HTML5** – Estructura base de cada página.
-- **Tailwind CSS** – Framework CSS para un diseño moderno y responsive.
-- **JavaScript (Vanilla)** – Lógica funcional del buscador, carrito y demás interacciones dinámicas.
+# 🪵 Tienda Hermanos Jota 🛋
 
-##  Funcionalidades Principales
-- **Página de Inicio (`index.html`)**  
-  Presentación de la marca, introducción al catálogo y acceso rápido a las secciones principales.
+**Proyecto académico:** Tienda online de muebles de madera de autor.
+Diseñada para ofrecer una **experiencia de compra moderna, atractiva y fácil de usar**, combinando **estética artesanal y tecnología web**.
 
-- **Catálogo de Productos (`productos.html`)**  
-  Muestra el listado completo de productos, con **barra de búsqueda funcional** para filtrar fácilmente.
+---
 
-- **Detalle de Producto (Modal de Carrito)**  
-  Cada página incluye un **modal de carrito** que permite visualizar y gestionar productos seleccionados sin abandonar la navegación.
+## 🛠 Tecnologías Utilizadas
 
-- **Checkout (`checkout.html`)**  
-  Página para procesar las compras seleccionadas en el carrito.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat\&logo=html5\&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat\&logo=css3\&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=flat\&logo=tailwind-css\&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat\&logo=javascript\&logoColor=black)
 
-- **Contacto (`contacto.html`)**  
-  Formulario de contacto para consultas, sugerencias o soporte.
+* **HTML5**: Estructura semántica de cada página, encabezados, secciones y formularios.
+* **CSS3**: Estilos personalizados para identidad visual, transiciones y efectos madera.
+* **Tailwind CSS**: Layout responsive, grids flexibles, espaciado consistente y tipografía.
+* **JavaScript (Vanilla)**: Funcionalidades dinámicas: buscador, carrito, modales, validación de formularios y cálculo de totales.
 
-## Estructura del Proyecto
-El repositorio organiza sus archivos de forma clara:
-- **`/css`** → Estilos globales y personalizados.
-- **`/js`** → Scripts de interacción (buscador, carrito, etc.).
-- **`/images`** → Recursos gráficos y fotografías de productos.
-- **Páginas HTML sueltas** → Cada sección principal en un archivo independiente.
+---
 
-## ▶Ejecución del Proyecto
-No requiere instalación de dependencias.  
-Para visualizar el proyecto:
-1. Clona el repositorio.
-2. Abre `index.html` en tu navegador.
+## 📄 Páginas HTML y Funcionalidades
 
-## Alumnos
-coronel alexis
-kevin laura
-Leandro Ferreira
-luciana Dezzi
-Manuela Dasso
-Candela Gorosito
+| Página                      | Función                                                                                                            | Tecnologías aplicadas                                                                                      |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| **`index.html`**            | Página de inicio: presentación de la marca, productos destacados y navegación rápida.                              | HTML semántico, Tailwind para layout responsive, CSS para animaciones y JS mínimo.                         |
+| **`productos.html`**        | Catálogo completo con **barra de búsqueda dinámica**.                                                              | HTML + Tailwind para cards responsive, CSS personalizado para hover y JS para filtrado de productos.       |
+| **`detalle-producto.html`** | Modal de carrito accesible desde cada producto: añadir, quitar o visualizar productos sin abandonar la navegación. | HTML para estructura del modal, CSS/Tailwind para diseño responsive, JS para lógica del carrito.           |
+| **`checkout.html`**         | Página de resumen de compra, cálculo de total y botones de finalizar o volver.                                     | HTML para tarjetas, CSS/Tailwind para layout responsive y hover, JS para actualizar totales dinámicamente. |
+| **`contacto.html`**         | Formulario para consultas, soporte o sugerencias.                                                                  | HTML semántico, CSS/Tailwind para estilo y JS para validación y mensajes de éxito.                         |
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+/css        → Estilos globales y específicos (productos, detalle, checkout, carrito, contacto)
+/js         → Scripts de interacción (buscador, carrito, modales, validación)
+/images     → Fotografías y recursos gráficos de productos
+*.html      → Páginas principales independientes
+```
+
+---
 
 
+## ▶ Cómo Ejecutar el Proyecto
+
+No requiere instalación de dependencias.
+
+1. Clonar el repositorio:
+
+```bash
+git clone 
+```
+
+2. Abrir `index.html` en cualquier navegador moderno.
+
+---
+
+## 👥 Equipo de Trabajo
+
+* Coronel Alexis
+* Kevin Laura
+* Leandro Ferreira
+* Luciana Dezzi
+* Manuela Dasso
+* Candela Gorosito
+
+---
