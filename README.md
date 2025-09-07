@@ -1,6 +1,3 @@
-Perfecto, Treaker. Vamos a crear un README **profesional, visual y completo**, resaltando las tecnologías, la funcionalidad de cada HTML y la interacción entre HTML, CSS/Tailwind y JS, listo para GitHub.
-
----
 
 # 🪵 Tienda Hermanos Jota 🛋
 
